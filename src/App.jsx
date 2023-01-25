@@ -1,25 +1,19 @@
 import { useState } from 'react'
 import './App.css'
+import { Header } from './common/Header/Header'
+import { Body } from './pages/Body/Body'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <div className="App">
-      <div>
-       
-       
-      </div>
-     
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-       
-      </div>
-     
+      <Header />
+      <Body />
+      
     </div>
   )
 }
 
 export default App
+
