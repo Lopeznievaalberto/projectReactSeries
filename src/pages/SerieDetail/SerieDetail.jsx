@@ -75,18 +75,16 @@ export const SerieDetail = () => {
 
     return(
         <div className='serieDesign'>
-            {detailRdx.choosen.id !== '' &&
+            {detailRdx.choosen._id !== '' &&
             
                 <div className='serieDetailCard'>
-                    <div>{detailRdx.choosen.name}</div>
+                    <div>{detailRdx.choosen.tittle}</div>
 
-                    {detailRdx.choosen.original_name !== detailRdx.choosen.name &&
-
-                        <div>{detailRdx.choosen.original_name}</div>
-                    }
                     <div><img className='detailPoster' src={`${poster_default}${detailRdx.choosen.poster_path}`}/></div>
-                    <div>{detailRdx.choosen.first_air_date}</div>
-                    <div>{detailRdx.choosen.overview !== '' ? detailRdx.choosen.overview : "No overview available"}</div>
+                    <div>{detailRdx.choosen.year}</div>
+                <div>{detailRdx.choosen.genre}</div>
+                <div>{detailRdx.choosen.rating}</div>
+               
 
                     {/* En caso de que el usuario esté logeado, es decir, tenemos sus credenciales en REDUX, mostraremos
                     un boton para poder alquilar la película */}
@@ -103,4 +101,5 @@ export const SerieDetail = () => {
         </div>
     )
 
-}
+};
+

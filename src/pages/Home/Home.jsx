@@ -46,7 +46,7 @@ export const Home = () => {
                             //guardo en el hook tan sólo las series, sin la info 
                             //de la conexión etc.... sólo las series
 
-                            setSeries(resultado.data.results);
+                            setSeries(resultado.data);
                         }
                     )
                     .catch(error => console.log(error));
@@ -85,7 +85,7 @@ export const Home = () => {
                     {datosReduxSeries.series.map(
                         serie => {
                             return (
-                                <div onClick={() => Choosen(serie)} key={serie.id}>
+                                <div onClick={() => Choosen(serie)} key={serie._id}>
                                     <CardSerie serie={serie} />
                                 </div>
                             )
@@ -108,7 +108,7 @@ export const Home = () => {
                             {series.map(
                                 serie => {
                                     return (
-                                        <div onClick={() => Choosen(serie)} key={serie.id}>
+                                        <div onClick={() => Choosen(serie)} key={serie._id}>
                                             <CardSerie serie={serie} />
                                         </div>
                                     )
