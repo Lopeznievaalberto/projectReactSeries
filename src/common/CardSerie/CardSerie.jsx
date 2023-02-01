@@ -7,9 +7,9 @@ export const CardSerie = ({serie}) => {
     
     return (
         <div className='cardSerieDesign'>
-            <div>{serie.name !== '' ? serie.name : "Nombre no disponible"}</div>
+            <div className='text'>{serie.title !== '' ? serie.title : "Titulo no disponible"}</div>
             <div><img className='posterDesign' src={`${poster_default}${serie.poster_path}`}/></div>
-            <div>{serie.first_air_date !== '' ? serie.first_air_date : "TBA"}</div>
+            <div>{serie.year !== '' ? serie.year : "TBA"}</div>
         </div>
     )
 }
