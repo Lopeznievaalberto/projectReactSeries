@@ -57,10 +57,7 @@ export const Home = () => {
 
     }, [series]);
 
-    // useEffect(() => {
-    //     console.log("eeeeooooooooo", datosReduxSeries);
-    // })
-
+ 
     const Choosen = (serie) => {
 
         //El primer paso ahora será guardar en Redux la serie escogida

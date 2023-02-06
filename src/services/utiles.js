@@ -10,3 +10,5 @@ export const Decoder = (token) => {
 }
 
 export const poster_default = 'https://image.tmdb.org/t/p/original/';
+
+

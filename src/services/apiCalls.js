@@ -30,15 +30,24 @@ export const getSearch = async (busqueda) => {
 //Funcion que alquila
 export const postRent = async (body, token) => {
     let config = {
-        method: 'post', //aqui especifico el protocolo http
-        url : `${root}/oders/neworder`, //este sería mi endpoint del backend
-        body, //el body que contiene los datos
         headers: { 
             'Authorization': 'Bearer ' + token
           }
     }
-     return await axios.post(config);
-}
+    return await axios.post(`${root}rentals/newRental`, body, config);
+};
+
+export const allUsersAdmin = async (token) => {
+    let config = {
+        headers: { 
+            'Authorization': 'Bearer ' + token
+          }
+    }
+    return await axios.get(`${root}rentals/getAll`, config);
+};
+
+
+
 
 
 

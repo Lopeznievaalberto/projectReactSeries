@@ -1,19 +1,15 @@
 
 .homeDesign {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 85vh;
     width: 100vw;
-
-    background-color: lightcyan;
+    background-color: rgb(0, 0, 0);
 }
 
 .rosterDesign {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
